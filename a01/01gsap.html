@@ -79,6 +79,14 @@
 
 
 
+        <h1>4.設定動畫屬性</h1>
+
+        <div class="box6"></div>
+        <button id="play">play</button>
+        <button id="pause">pause</button>
+
+
+
     </div>
 
 
@@ -90,6 +98,9 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js'></script>
     <!-- bootstrap -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.js'></script>
+
+
+    <!-- 導入下載的GSAP -->
     <script src="./gsap/gsap.js"></script>
 
 
@@ -130,6 +141,7 @@
         })
 
          // 3.設定CSS屬性-------------------------------------------------------------------------
+        //  CSS 的屬性都可使用
          const tween3 =gsap.to('.box5', {
             x:100, //translate-x
             y:100, //translate-x
@@ -142,6 +154,27 @@
             backgroundColor:'transparent',
             backdropFilter:'blur(2px)'
          })
+
+         const word = gsap.to('#word',{
+            color:'random([red,green,blue])',
+            fontWeight:'bold',
+            fontSize:"1.5rem",
+            lineHeight:2,
+            letterSpacing:'0.5rem'
+         })
+
+
+        //  4.設定動畫屬性-------------------------------------------------------------------------
+        const tween4 = gsap.to('.box6',{
+            x:500,
+            duration:3,
+            delay:3,//延遲3秒後播放
+            repeat:2,//還有兩次 //初始播放不算
+            repeat:-1,//無限重複
+            //repeatDelay:2, //重複播放的延遲時間
+            //repeatRefresh:true, // 重複播放時，會記錄前一次的狀態再執行，需與相對位置，隨機搭配使用
+            yoyo: true //重複播放時，會來回播放
+        })
 
     </script>
 
