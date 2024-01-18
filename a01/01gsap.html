@@ -66,6 +66,19 @@
         <div class="box4"></div>
         <div class="box4"></div>
 
+
+        <h1>3.設定CSS屬性</h1>
+        <div class="box5" style="margin:auto;"></div>
+
+        <p id="word">
+            新增不錯一個互相服飾穩定，懷疑筆記本，接收任務供應字幕專業行動反而設備安徽傳說代理減肥是有，日報自身反而日記分析一下後面留學部門只要同志用品努力昨天享受
+            ，立刻感情是我眾人部落格患者發表組織，審批上了諮詢著名一種不必亞洲，現象信譽首頁維修沒事地點打造，會員價搜尋以後我還輕輕戰爭保證不可以都要收集家裡逐步暴
+            力網頁班，會計真實內容簡介到達學者看到崗位下載，插入你怎麼錯誤感謝那樣進攻龍岡好多聯繫方式當我某種，不願沒有任何好友生態此處，一會兒女朋友考生圖形瀏覽次
+            數義務星座，愛情上班大部分哈哈位置擁有認真如下強大禁止設為就是失望鏡頭，男生一流就好到處遠遠命運發貼你怎不來不停網路欣賞，更多不見格式，沒有之。
+        </p>
+
+
+
     </div>
 
 
@@ -81,7 +94,7 @@
 
 
 
-    
+
     <script>
         // 1.選擇目標-------------------------------------------------------------------------
         const b1 = document.querySelector('.box1')//js
@@ -94,7 +107,7 @@
         //第三種 gsap 推薦使用 css 規範的選擇器
         const tween1 = gsap.to('.box1', {
             x: 500,
-            duration:3
+            duration: 3
         })
 
         // 2.選擇群組使用陣列-------------------------------------------------------------------------
@@ -111,10 +124,24 @@
         //     x: 500,
         //     duration:3
         // })
-        const tween2 = gsap.to('.box2, .box3, .box4',{
+        const tween2 = gsap.to('.box2, .box3, .box4', {
             x: 500,
-            duration:3
+            duration: 3
         })
+
+         // 3.設定CSS屬性-------------------------------------------------------------------------
+         const tween3 =gsap.to('.box5', {
+            x:100, //translate-x
+            y:100, //translate-x
+            rotation:720, //rotate
+            scale:2, //scale
+            width:'100px',
+            height:100,
+            border:'5px solid red',
+            boxShadow:'0 0 10px rgba(255,0,0,1)',
+            backgroundColor:'transparent',
+            backdropFilter:'blur(2px)'
+         })
 
     </script>
 
