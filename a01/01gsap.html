@@ -168,12 +168,21 @@
         const tween4 = gsap.to('.box6',{
             x:500,
             duration:3,
-            delay:3,//延遲3秒後播放
+            paused:true,
+            //delay:3,//延遲3秒後播放
             repeat:2,//還有兩次 //初始播放不算
             repeat:-1,//無限重複
             //repeatDelay:2, //重複播放的延遲時間
             //repeatRefresh:true, // 重複播放時，會記錄前一次的狀態再執行，需與相對位置，隨機搭配使用
             yoyo: true //重複播放時，會來回播放
+        })
+
+
+        $("#play").on('click',function(){
+        tween4.play()
+        })
+        $("#pause").on('click',function(){
+        tween4.pause()
         })
 
     </script>
